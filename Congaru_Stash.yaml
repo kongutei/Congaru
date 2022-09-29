@@ -45,7 +45,7 @@ http:
     - ^https?:\/\/(www.)?firefox\.com\.cn\/(download\/)?$ https://www.mozilla.org/zh-CN/firefox/new/ 302
 
 # 在 subscribe-url 粘贴 Sub-Store 链接
-subscribe-url: https://sub.store/download/V2Tun
+subscribe-url: https://sub.store/download/yours
 
 # 远程资源默认配置
 remote-resources-default-config: &remote-resources-default-config
@@ -59,7 +59,7 @@ proxy-providers:
     <<: *remote-resources-default-config
     # 此处默认使用 Sub-Store 订阅链接，如果需要使用其他订阅链接，可以替换下面的 url 即可，但只限于 Sub-Store 与 Clash 类型的链接
     # 多个链接使用英文符号的竖杠 | 隔开一起写上即可
-    url: https://sub.store/download/V2Tun
+    url: https://sub.store/download/yours
     path: ./all.yaml
     health-check:
       enable: true
