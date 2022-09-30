@@ -1,6 +1,6 @@
 # Congaru - 自用机场分流规则
 
-该机场分流规则改动自以下两个分流规则，为个人克制化的规则，并无法保证适用于所有人。
+该机场分流规则改动自以下两个分流规则，为个人客制化的规则，并无法保证适用于所有人。
 
 1. [https://raw.githubusercontent.com/QuentinHsu/Awesome-Apple/main/Surge/Config/Awesome-Beta.conf](https://raw.githubusercontent.com/QuentinHsu/Awesome-Apple/main/Surge/Config/Awesome-Beta.conf)
 2. [https://raw.githubusercontent.com/TributePaulWalker/Profiles/main/Surge/Surge Pro.conf](https://raw.githubusercontent.com/TributePaulWalker/Profiles/main/Surge/Surge%20Pro.conf)
