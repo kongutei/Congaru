@@ -268,6 +268,18 @@ rule-providers:
     behavior: classical
     url: https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Steam/Steam.yaml?raw=true
     path: ./ruleset/steam.yaml
+  
+  douyin:
+    <<: *remote-resources-default-config
+    behavior: classical
+    url: https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/DouYin/DouYin.yaml?raw=true
+    path: ./ruleset/DouYin.yaml
+  
+  tencent:
+    <<: *remote-resources-default-config
+    behavior: classical
+    url: https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Tencent/Tencent.yaml?raw=true
+    path: ./ruleset/Tencent.yaml
 
   global-proxy:
     <<: *remote-resources-default-config
@@ -312,6 +324,8 @@ rules:
   - RULE-SET,global-proxy,Global Proxy
   - RULE-SET,discord,Area
   - RULE-SET,steam,Area
+  - RULE-SET,douyin,Global Direct
+  - RULE-SET,tencent,Global Direct
   - RULE-SET,china-asn,Global Direct
   - GEOIP,CN,Global Direct
   - MATCH,Final
