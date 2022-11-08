@@ -45,30 +45,20 @@ http:
     - ^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
     - ^https?:\/\/(www.)?firefox\.com\.cn\/(download\/)?$ https://www.mozilla.org/zh-CN/firefox/new/ 302
 
-# 在 subscribe-url 粘贴 Sub-Store 链接
-subscribe-url: https://gist.githubusercontent.com/kongutei/25cc68d4f0a84af69246ce34f1389626/raw/CongNode
-# 远程资源默认配置
-remote-resources-default-config: &remote-resources-default-config
-  type: http
-  interval: 86400
-
-
-proxy-providers:
-  # 全部节点
-  all-sub: &all-sub
-    <<: *remote-resources-default-config
-    # 此处默认使用 Sub-Store 订阅链接，如果需要使用其他订阅链接，可以替换下面的 url 即可，但只限于 Sub-Store 与 Clash 类型的链接
-    # 多个链接使用英文符号的竖杠 | 隔开一起写上即可
-    url: https://gist.githubusercontent.com/kongutei/25cc68d4f0a84af69246ce34f1389626/raw/CongNode
-    path: ./all.yaml
-    health-check:
-      enable: true
-      interval: 600
-      url: https://captive.apple.com
-
-
 proxies:
-
+  - {"skip-cert-verify":true,"sni":"oss-cn-shanghai.westdatacloud.xyz","type":"trojan","password":"30030B00-A596-87B4-965A-511CD7E05351","server":"oss-cn-shanghai.westdatacloud.xyz","port":20048,"name":"🇨🇳 台湾 01"}
+  - {"name":"🇨🇳 台湾 02","type":"vmess","server":"220.130.80.179","port":"443","cipher":"auto","uuid":"70206490-8292-4242-b263-e7d11589362e","alterId":"0","tls":true,"network":"ws","ws-opts":{"path":"/down","headers":{"Host":"wx.adbse.xyz"}},"servername":"wx.adbse.xyz"}
+  - {"skip-cert-verify":true,"sni":"flowery.meijireform.com","type":"trojan","password":"Ty33ylFA4u6A5e0NE3wRFp3DIa8lZOzC87CeKnxYgpSOSa2ZaXBjDDSY9qCcxR","server":"45.64.22.55","port":443,"name":"🇯🇵 日本 01"}
+  - {"skip-cert-verify":true,"sni":"yokoha.freetrade.link","type":"trojan","password":"xSYy8KOpEyOjgaNFCeC3a72DS6wBAcz90pDZRRSXnxquIFZlT5433ClYD38aeA","server":"45.64.22.55","port":443,"name":"🇯🇵 日本 02"}
+  - {"skip-cert-verify":true,"sni":"tensely.freetrade.link","type":"trojan","password":"ZEIR0qFZau9jOp7x6e8e4y3AaXwS2SzD3llxTyRYKCF8DCD3c5Y3pgNnaSOBAC","server":"45.64.22.55","port":443,"name":"🇯🇵 日本 03"}
+  - {"name":"🇯🇵 日本 04","type":"vmess","server":"zzjp.bfyun.top","port":"10021","cipher":"auto","uuid":"34786ab0-8443-4f76-b0c9-58b9be412fa8","alterId":"0","tls":true,"network":"ws","ws-opts":{"path":"/cctv13/hd.m3u8","headers":{"Host":"zzjp.bfyun.top"}},"servername":"zzjp.bfyun.top"}
+  - {"skip-cert-verify":true,"sni":"pbvre.freetrade.link","type":"trojan","password":"NqYpxKxB8A5jnDaISe834lAOaTwEOYzCeSD7CSZyFa0C3ypcR2F9XD3ug36lZR","server":"45.64.22.55","port":443,"name":"🇸🇬 新加坡 01"}
+  - {"skip-cert-verify":true,"sni":"mhkla.freetrade.link","type":"trojan","password":"TaSXwOxORaZ7pD8DlzCE3yNFS5C38eeCuDng03FcA4BSpjK96YaZRIAlx2yqY3","server":"45.64.22.55","port":443,"name":"🇸🇬 新加坡 02"}
+  - {"skip-cert-verify":true,"sni":"mhkla.freetrade.link","type":"trojan","password":"TaSXwOxORaZ7pD8DlzCE3yNFS5C38eeCuDng03FcA4BSpjK96YaZRIAlx2yqY3","server":"45.64.22.55","port":443,"name":"🇸🇬 新加坡 03"}
+  - {"name":"🇺🇸 美国 01","type":"vmess","server":"rn.tsk183.ml","port":"443","cipher":"auto","uuid":"d6cfc83f-e1ee-4085-8052-4491a1eeba0f","alterId":"0","tls":true,"network":"ws","ws-opts":{"path":"/good","headers":{"Host":"rn.tsk183.ml"}},"servername":"rn.tsk183.ml"}
+  - {"name":"🇺🇸 美国 02","type":"vmess","server":"172.64.148.111","port":"443","cipher":"auto","uuid":"f33957e8-372e-4fba-99ed-f4db32cce9e5","alterId":"0","tls":true,"network":"ws","ws-opts":{"path":"/ray","headers":{"Host":"fr2.cfcdn4.xyz"}},"servername":"fr2.cfcdn4.xyz"}
+  - {"skip-cert-verify":true,"sni":"tj2.dalazhi.cyou","type":"trojan","password":"8f70fde3-a04c-4f6a-b705-aef7406f6ac1","server":"tj2.dalazhi.cyou","port":443,"name":"🇺🇸 美国 03"}
+  - {"skip-cert-verify":true,"sni":"golang.protocolbuffer.com","type":"trojan","password":"ZFYOpKqD8uEClpZ2ya83cyCDalwSOYz3F3eCxnBD4eSXNSR5R0aAATj7I3x69g","server":"219.76.13.175","port":443,"name":"🇭🇰 香港"}
 
 proxy-groups:
 
